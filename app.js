@@ -60,7 +60,7 @@ function index(page){
     });
 }
 
-动态加载多说评论框的函数
+//动态加载多说评论框的函数
 function toggleDuoshuoComments(container, id){
     var el = document.createElement('div');//该div不需要设置class="ds-thread"
     var url = window.location.href;
