@@ -61,14 +61,14 @@ function index(page){
 }
 
 // 动态加载多说评论框的函数
-function toggleDuoshuoComments(container, id){
-    var el = document.createElement('div');//该div不需要设置class="ds-thread"
-    var url = window.location.href;
-    el.setAttribute('data-thread-key', id);//必选参数
-    el.setAttribute('data-url', url);//必选参数
-    DUOSHUO.EmbedThread(el);
-    jQuery(container).append(el);
-}
+//function toggleDuoshuoComments(container, id){
+//    var el = document.createElement('div');//该div不需要设置class="ds-thread"
+//    var url = window.location.href;
+//    el.setAttribute('data-thread-key', id);//必选参数
+//    el.setAttribute('data-url', url);//必选参数
+//    DUOSHUO.EmbedThread(el);
+//    jQuery(container).append(el);
+//}
 
 function detail(id){
     if(!window._G){
@@ -79,7 +79,7 @@ function detail(id){
     if(_G.post[id].body != undefined){
       $('#container').html(_G.post[id].body);
       $('#title').html(_G.post[id].title);
-      toggleDuoshuoComments('#container', id);
+//      toggleDuoshuoComments('#container', id);
       return;
     }
     $.ajax({
@@ -105,7 +105,7 @@ function detail(id){
             });     
             window._G.post[id].title = title.toHTML();
             $('#title').html(window._G.post[id].title);
-            toggleDuoshuoComments('#container', id);
+//            toggleDuoshuoComments('#container', id);
         }
     });  
 
