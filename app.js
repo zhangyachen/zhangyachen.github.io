@@ -11,7 +11,7 @@ function index(page){
     $.ajax({
         url:"https://api.github.com/repos/"+_config['owner']+"/"+_config['repo']+"/issues",
         data:{
-            filter       : 'created',
+            filter       : 'updated',
             page         : page,
             per_page     : _config['per_page'],
 //            access_token : _config['access_token']
